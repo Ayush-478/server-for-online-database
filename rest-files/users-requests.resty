@@ -1,0 +1,36 @@
+
+POST http://localhost:5000/crud/
+accept: application/json
+Content-Type: application/json; charset=UTF-8
+
+{
+  "amount": 250,
+  "category": "Food",
+  "description": "Lunch with friends",
+  "date": "2025-10-31"
+}
+
+
+###
+GET http://localhost:5000/crud/cherry/?q='asf'
+accept: application/json
+Content-Type: application/json; charset=UTF-8
+
+###
+POST http://localhost:5000/register
+accept: application/json
+Content-Type: application/json; charset=UTF-8
+
+{
+  "email" : "asfnsa@jsf.com"
+}
+
+###
+POST http://localhost:5000/signin
+accept: application/json
+Content-Type: application/json; charset=UTF-8
+
+{
+  "email" : "asfnsa@jsf.com",
+  "password" : "1234102490"
+}
