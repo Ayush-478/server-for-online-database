@@ -11,6 +11,7 @@ import errorHandler from './middleware/errorHandler.js'
 import dotenv from 'dotenv'
 const app = express();
 const port = 5000
+const host = '0:0:0:0
 
 const corsOptions = {
   origin: 'http://localhost:3000', 
@@ -40,6 +41,6 @@ app.get('/', (req,res,next)=>{
 
 app.use(errorHandler)
 
-app.listen(port, ()=>{console.log("Server running"
+app.listen(port,host, ()=>{console.log("Server running"
 )})
 
