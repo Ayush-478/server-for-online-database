@@ -1,4 +1,4 @@
-
+import dotenv from 'dotenv'
 import express from 'express'
 import cors from 'cors'
 import https from 'https'
@@ -10,7 +10,7 @@ import errorHandler from './middleware/errorHandler.js'
 import dotenv from 'dotenv'
 const app = express();
 const PORT = process.env.PORT || 5000
-const host = '0:0:0:0'
+dotenv.config()
 
 const corsOptions = {
   origin: 'http://localhost:3000', 
@@ -39,6 +39,6 @@ app.get('/', (req,res,next)=>{
 
 app.use(errorHandler)
 
-app.listen(PORT,host, ()=>{console.log("Server running"
+app.listen(PORT,'0:0:0:0', ()=>{console.log("Server running"
 )})
 
