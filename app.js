@@ -7,7 +7,6 @@ import cookieParser from 'cookie-parser'
 import users from './routes/users.js'
 import crud from './routes/crud.js'
 import errorHandler from './middleware/errorHandler.js'
-import dotenv from 'dotenv'
 const app = express();
 const PORT = process.env.PORT || 5000
 dotenv.config()
