@@ -9,7 +9,6 @@ import crud from './routes/crud.js'
 import errorHandler from './middleware/errorHandler.js'
 const app = express();
 const PORT = process.env.PORT || 5000
-dotenv.config()
 
 const corsOptions = {
   origin: 'http://localhost:3000', 
