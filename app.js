@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000
 
 const corsOptions = {
-  origin: 'https://cloud-database-storage-rho.vercel.app/',
+  origin: 'https://cloud-database-storage-rho.vercel.app',
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders : ["Content-Type", "Authorization", "Accept"],
   credentials: true
