@@ -5,6 +5,10 @@ import { addCatToNewUser } from '../services/directoryOperations.js'
 
 const router = express.Router()
 
+router.get('/', (req,res,next)=>{
+  res.status(200).send("Render Server Running.")
+})
+
 router.get('/login', async(req,res,next)=>{
   try{
     console.log(req)
