@@ -1,7 +1,6 @@
 import express from 'express'
 import { verifyCookie } from './crud.js'
 import db from '../services/databaseOperations.js'
-import { addCatToNewUser } from '../services/directoryOperations.js'
 
 const router = express.Router()
 
@@ -23,7 +22,6 @@ router.get('/login', async(req,res,next)=>{
 router.get('/cat', async(req,res,next)=>{
   try{
     const uid = verifyCookie(req)
-    let cat = await addCatToNewUser(uid)
     if(cat.path){
       res.status(200).sendFile(cat.path)
     }else{res.sendStatus(500)}
