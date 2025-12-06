@@ -2,7 +2,6 @@ import express from 'express';
 import jwt from 'jsonwebtoken'
 import db from '../services/databaseOperations.js'
 import path from 'path'
-import { addCatToNewUser } from '../services/directoryOperations.js'
 
 const app = express()
 const router = express.Router()
@@ -66,7 +65,7 @@ export function verifyCookie(req){
 router.post('/', async(req,res,next)=>{
   try{
     let username = verifyCookie(req)
-    addCatToNewUser(username)
+    console.log(username)
     let fileArray = await db.getFileArray(username, req.body.location)
     //filearray = [{type : "wafiosaf", name : "hfioasfoisa}]
     res.status(200).send(fileArray)
